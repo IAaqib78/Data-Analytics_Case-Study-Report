@@ -1,0 +1,268 @@
+---
+title: 'Case Study Report: Avocado Prices — Market Insights'
+author: "Aakif Altaf"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    toc: true
+    number_sections: true
+    fig_caption: true
+  html_document:
+    toc: true
+    toc_float: true
+    theme: united
+  word_document:
+    toc: true
+fontsize: 11pt
+geometry: margin=1in
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, fig.width = 8, fig.height = 4.5)
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(scales)
+library(broom)
+library(tinytex)
+```
+---
+# Introduction
+
+**Business context:**
+A grocery retail client wants to understand historical avocado pricing and sales patterns across U.S. regions to improve pricing, promotions, and inventory planning.
+
+**Primary business question:**
+
+How can historical avocado pricing and sales trends inform retail decisions on pricing, promotion timing, and inventory allocation?
+
+**Sub-questions we answer:**
+
+
+1. How have average prices evolved over time (overall and by type)?
+
+2. How do prices and sales vary across regions? Which regions are highest/lowest price?
+
+3. Is there seasonality (monthly/weekly patterns) in price and volume?
+
+4. What is the relationship between price and total volume (does demand fall as price rises)?
+
+
+**Data: Import & Quick Snapshot**
+
+
+```{r , echo=FALSE}
+av  <- read_csv("C:/Users/Aaqib/Downloads/Google Professional certificate/Data Analytic Courses By Google/Course 8 Capstone Project/case_study/dataset/avocado.csv")
+
+# Quick cleanup: make names consistent, drop any index column
+av <- clean_names(av)
+# removing unwanted indexes
+if("unnamed_0" %in% names(av)){
+  av <- av %>% select(-unnamed_0)
+}
+
+# ensure date is Date type
+ if("date" %in% names(av)){
+   av <- av %>% mutate(date = mdy(date))
+ } else if("day" %in% names(av)){
+   av<- av %>% mutate(date = mdy(date))
+   
+ }
+# basic checks
+glimpse(av)
+
+library(skimr)
+skim_without_charts(av)
+```
+
+**Brief note on data quality & limitations:**
+
+Data covers 2015–2018 across many U.S. regions; it's observational retail data.
+
+**Potential limitations:**  local promotions, missing marketing variables, no direct supply/wholesale price columns, and region aggregation hides within-region store variation. Treat correlations as directional signals, not causal proof.
+
+# Analysis & Insights
+
+1) Time trends — Average price over time (overall and by type)
+
+**Question:**
+Has the average retail price changed materially over time? Any divergence between organic vs conventional?
+
+```{r, echo=FALSE}
+daily_price_trend <- av %>% mutate(month = floor_date(date, "month")) %>% 
+  group_by(month, type) %>% 
+  summarise(avg_price = mean(average_price, na.rm = T),.groups = "drop")
+
+# overall monthly trend
+price_trend_overall <- daily_price_trend %>%  group_by(month) %>% 
+  summarise(avg_price = mean(avg_price, na.rm = T))
+
+# visualization
+ggplot()+geom_line(data = price_trend_overall, aes(x = month, y = avg_price),size = 0.8) +
+  geom_line(data= daily_price_trend,aes(x = month, y= avg_price, colour = type),
+            linetype = "dashed", alpha = 0.9)+
+  labs(title = "Monthly Average Price of Avocados (2015 - 2018)",
+       x = "Month", y = "Average Price (USD)",
+       caption = "Solid line = overall monthly avg. Dashed lines = type-specific") +
+  scale_y_continuous(labels = dollar_format(prefix="$")) +
+  theme_minimal()
+```
+**Insight:**
+
+Prices fluctuate seasonally and with supply conditions. Organic avocados consistently show a higher average price than conventional across the time span.
+
+Business implication: organic commands a premium — target promotions and premium shelf space accordingly.
+
+
+
+**2) Regional comparison — Where are prices and volumes highest?**
+
+**Question:**
+Which regions consistently show higher prices and which show lower prices?
+
+```{r, echo=FALSE}
+region_stats <- av %>% group_by(region) %>% 
+  summarise(avg_price = mean(average_price, na.rm = T ),
+            avg_volume = mean(total_volume, na.rm = T),
+            count = n(), .groups = "drop")
+top_price_regions = region_stats %>% top_n(25, avg_price)
+low_price_regions = region_stats %>% top_n(-25, avg_price)
+# visualization
+
+# plot top price regions
+ggplot(top_price_regions, aes(x = reorder(region, avg_price), y = avg_price, fill = region)) +
+  geom_col() +
+  coord_flip() +
+  labs(title = "Top 12 Regions by Average Avocado Price",
+       x = "", y = "Average Price (USD)")  +
+  scale_y_continuous(labels = dollar_format(prefix = "$")) +
+  theme_minimal()
+
+```
+
+**Insight:**
+
+Some regions (e.g., **HartfordSpringfield** in this dataset) show notably higher average prices. These regional differences can be due to supply chain costs, demand, or retailer mix.
+
+Business implication: allocate organic or premium stock to higher-price regions and consider price promotions in lower-price regions to increase volume.
+
+
+**3) Seasonality — monthly patterns (price & volume)**
+
+**Question:**
+Are there predictable monthly/seasonal patterns?
+
+```{r, echo=FALSE}
+#Seasonality — monthly patterns (price & volume)
+
+monthly <- av %>% mutate(month = month(date, label = T)) %>% 
+  group_by(month) %>% summarise(avg_price = mean(average_price, na.rm = T),
+                                t_volume = sum(total_volume, na.rm =T), .gropus ="drop" )
+# visualization
+  ggplot(monthly, aes(x = month, y = avg_price, group=1)) +
+  geom_line(color = "brown") + geom_point(color = "blue") +
+  labs(title = "Average Price by Month", y = "Avg Price (USD)", x = "")
+
+ ggplot(monthly, aes(x = month, y = t_volume/1e6, group=1)) +
+  geom_line(color="darkred") + geom_point(color="steelblue") +
+  labs(title = "Total Volume by Month (millions)", y = "Total Volume (millions)", x = "")
+ 
+```
+
+**Insight**:
+
+Volume shows recurring peaks (seasonal demand) while prices also vary with season — often higher when supply tightens.
+
+**Business implication:** increase inventory ahead of expected high-volume months and schedule promotions off-peak to smooth demand.
+
+
+**4) Price vs. Volume — correlation & regression**
+
+**Question:* **Is there an observable relationship between price and total volume?
+
+```{r, echo=FALSE}
+ cor(av$ total_volume, av$ average_price, use = "complete.obs")
+ 
+ # One-liner for linear model summary:
+ # Fits a linear model and shows intercept, slope, and p-values in a tidy table.
+ tidy(lm(total_volume ~ average_price, data = av))
+```
+**Insight:**
+
+
+Correlation is typically weak/negative (i.e., higher volumes often associated with lower prices), but because of strong seasonality and regional effects, a simple global correlation is noisy.
+
+**5) Conventional vs Organic — distribution and hypothesis test**
+
+**Question:**
+Are organic prices significantly higher than conventional?
+
+```{r, echo=FALSE}
+# Conventional vs Organic — distribution and hypothesis test
+  # Are organic prices significantly higher than conventional?
+ ggplot(av, aes(x= type, y= average_price, color = type))+
+   geom_boxplot(alpha = 0.8, show.legend = F)+
+   labs(title = "Average_distribution : organic vs Conventional", x= "", y = "")+
+   scale_y_continuous(labels = dollar_format(prefix = "$"))+
+   theme_minimal()
+```
+Also checking the Statistically tests if the average prices of organic and conventional avocados are significantly different.
+
+```{r, echo=FALSE}
+ t_test <- t.test(average_price ~ type, data = av)
+ t_test
+ 
+ # ploting it with the graph
+ library(ggpubr)
+ ggplot(av, aes(x= type, y= average_price, color = type))+
+   geom_boxplot(alpha = 0.8, show.legend = F)+
+   labs(title = "Average_distribution : organic vs Conventional", x= "", y = "")+
+   scale_y_continuous(labels = dollar_format(prefix = "$"))+
+   theme_minimal()+stat_compare_means(method = "t.test", label.y = 2.2)
+```
+**Insight:**
+
+**Organic avocados** have a higher median/mean price than **conventional.** The t-test typically shows this difference is statistically significant.
+
+**Business implication:** organic can be positioned as a premium product; profit margins and promotion strategies should reflect that.
+
+
+#Answering the original business questions (concise)
+
+**What factors influence price?**
+Seasonality, avocado type (organic > conventional), and regional market differences. Price-volume relations indicate higher supply => lower price in general, but region and promotion effects matter.
+
+**How do trends apply to retailers?**
+Use seasonality to adjust inventory; push premium promotions for organic in higher-price regions.
+
+**How should this inform marketing?**
+Time promotions to low-price months, advertise organic as premium in high-willingness regions, and use price/volume monitoring to avoid stockouts before peak demand.
+
+
+
+# Recommendations.
+
+**1. Region-specific assortment:**
+Prioritize organic product allocation for high-price regions; add SKUs in high-volume regions.
+
+**2. Seasonal inventory planning:**
+Build inventory for predicted high-volume months; negotiate supplier capacity ahead of time.
+
+**3. Targeted promotions:**
+Offer discounts during lower-volume months to stimulate demand; avoid discounting right before major volume peaks.
+
+**4. Deeper analysis:**
+Estimate price elasticity by region and type (regression with region & month fixed effects); test promotional lift with A/B experiments.
+
+
+# Reproducibility & Files
+
+**Source data:** 
+avocado.csv (Kaggle, original dataset).
+
+
+# Thank You
+
+Thank you for reviewing this analysis.
+Contact: kmrtech99@gmail.com
+ 
