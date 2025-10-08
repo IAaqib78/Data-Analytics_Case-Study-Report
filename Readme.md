@@ -43,3 +43,6 @@ Certified by **IBM (Data Science Professional Certificate)** and **Google (Data 
 Focused on blending analytics, storytelling, and machine learning to transform data into strategy.
 
 📫 Connect on [kmrtech99@gmail.com) or explore my portfolio for more case studies.
+
+
+**[View the Avocado Case Study](https://iaaqib78.github.io/Data-Analytics_Case-Study-Report/avocado_case_study.html)**
