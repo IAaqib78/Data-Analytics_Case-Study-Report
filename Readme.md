@@ -1,46 +1,48 @@
-# Bellabeat Wellness Data Analysis Case Study
+#  Avocado Market Trend Analysis Case Study
 
-This repository presents a complete **data analytics case study** focused on uncovering behavioral patterns in **smart wellness device data** using **R and R Markdown**. The project explores relationships between **user activity, sleep, and calorie burn**, translating raw data into actionable insights for business growth and product innovation.
+This repository presents a comprehensive **data analytics project** exploring pricing and sales trends in the **U.S. Avocado Market** using **R and R Markdown**. The analysis leverages Kaggle’s *Avocado Prices Dataset* to uncover insights that can guide **marketing strategies, pricing optimization, and supply chain planning** for grocery retailers.
 
 ##  Project Overview
 
-Bellabeat, a high-tech wellness company, aims to empower women with data-driven health insights. This case study analyzes user data from smart devices to help the company identify opportunities to improve engagement and enhance its marketing strategy.
+The study investigates how factors such as **region, avocado type (conventional vs. organic), and time** influence both **average prices** and **sales volumes**. By combining descriptive statistics, time series visualization, and comparative analysis, the project highlights key business insights and actionable recommendations.
 
 ##  Objectives
 
-* Analyze daily activity, calories, and sleep metrics to identify patterns.
-* Understand how user behaviors vary across time and usage types.
-* Provide data-backed recommendations for Bellabeat’s business and marketing teams.
+* Identify regional differences in avocado prices and sales performance.
+* Explore how seasonality impacts price fluctuations and demand.
+* Compare sales patterns between organic and conventional avocados.
+* Provide data-driven recommendations to improve marketing and inventory strategies.
 
 ##  Tools & Technologies
 
 * **Language:** R
-* **Libraries:** tidyverse, lubridate, janitor, skimr, ggplot2
-* **Output Formats:** HTML, PDF, and RMarkdown
+* **Libraries:** tidyverse, lubridate, janitor, ggplot2, dplyr
+* **Deliverables:** RMarkdown (.Rmd), HTML Report, PDF Report
 
 ##  Key Insights
 
-* Users who consistently took more steps burned significantly more calories.
-* Longer sleep durations often correlated with lower daily activity levels.
-* Weekdays showed higher engagement than weekends — an opportunity for activity challenges.
-* Clear patterns in calorie-step relationships can inform targeted wellness campaigns.
-
-##  Deliverables
-
-* **RMarkdown (.Rmd):** Full analysis code and explanations.
-* **HTML Report:** Interactive and visually polished summary of insights.
-* **PDF Report:** Professional formatted presentation-ready document.
+* **Seasonal trends** reveal that avocado prices peak during specific months, likely due to demand surges.
+* **Organic avocados** are consistently priced higher but show **lower volume** compared to conventional ones.
+* **Regional variations** indicate that the West Coast markets have higher average prices, while the South shows greater volume sales.
+* **Negative correlation** between price and total volume implies classic demand elasticity — as prices rise, sales decrease.
 
 ##  Business Impact
 
-These insights can help Bellabeat refine user engagement strategies, personalize recommendations, and strengthen its position as a data-driven wellness brand.
+Retailers can use these insights to:
+
+* Adjust pricing dynamically during seasonal demand peaks.
+* Tailor promotions for regions with price-sensitive consumers.
+* Plan inventory more accurately to minimize waste and maximize profit.
 
 ##  Author
 
 **Aakif Altaf**
+
 *Data Scientist & Analyst*
-Certified by **IBM (Data Science Professional Certificate)** and **Google (Data Analytics Professional Certificate)**.
-Focused on blending analytics, storytelling, and machine learning to transform data into strategy.
+Certified by **IBM (Data Science)** and **Google (Data Analytics)**.
+Passionate about transforming raw datasets into strategic insights that drive smarter business decisions.
+
+ 
 
 📫 Connect on [kmrtech99@gmail.com) or explore my portfolio for more case studies.
 
