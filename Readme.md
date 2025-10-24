@@ -118,15 +118,26 @@ The analysis was performed as part of the **Google Data Analytics Professional C
 The Avocado Market Trend Analysis demonstrates how **data-driven insights** can improve **pricing, logistics, and inventory decisions** in agribusiness.  
 This study validates the power of **Google Data Analytics methodology**—from *Ask → Prepare → Process → Analyze → Share → Act*—in real-world applications.
 
----
+
+
+
+
+<h2 align="center"> Click Below To Explore Full Interactive Report</h2>
 
 <p align="center">
-  <a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank">
-    <img src="https://img.shields.io/badge/View_Google_Data_Analytics_Program-%2300C853?style=for-the-badge&logo=coursera&logoColor=white&labelColor=0D1117&color=00C853"/>
+  <a href="avocado_case_study.html" target="_blank">
+    <img src="https://img.shields.io/badge/🍃_Launch_Full_Interactive_Report-%2300e676?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0D1117&color=00e676" 
+         alt="View Full Interactive Report" />
   </a>
 </p>
 
----
+
+
+
+
+
+
+
 
 <p align="center">
   <b>“Turning raw data into insightful stories — one avocado at a time.”</b>  
