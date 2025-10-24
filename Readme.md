@@ -116,13 +116,47 @@ The analysis was performed as part of the **Google Data Analytics Professional C
 
 ---
 
-## 🧰 Tools & Techniques
-| Tool | Purpose |
-|------|----------|
-| **R / RStudio** | Data cleaning, wrangling, and visualization |
-| **ggplot2** | Plotting trends and comparative analytics |
-| **Excel / Google Sheets** | Quick EDA and cross-checking calculations |
-| **Markdown & GitHub** | Report documentation and version control |
+
+
+
+<h2 align="center">🧰 Tools & Techniques</h2>
+
+<table align="center">
+  <tr>
+    <th align="center" width="150" style="background-color:#1a1a1a;color:#00e6b8;">Tool</th>
+    <th align="center" style="background-color:#1a1a1a;color:#00e6b8;">Purpose</th>
+  </tr>
+  <tr>
+    <td align="center" style="background-color:#0d1117;">
+      <img src="https://www.r-project.org/logo/Rlogo.png" width="45"/><br><b>R / RStudio</b>
+    </td>
+    <td style="background-color:#0d1117;color:#e6e6e6;">Data cleaning, wrangling, and visualization</td>
+  </tr>
+  <tr>
+    <td align="center" style="background-color:#0d1117;">
+      <img src="https://raw.githubusercontent.com/selva86/datasets/master/images/ggplot2.png" width="45"/><br><b>ggplot2</b>
+    </td>
+    <td style="background-color:#0d1117;color:#e6e6e6;">Plotting trends and comparative analytics</td>
+  </tr>
+  <tr>
+    <td align="center" style="background-color:#0d1117;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="45"/><br><b>Excel / Google Sheets</b>
+    </td>
+    <td style="background-color:#0d1117;color:#e6e6e6;">Quick EDA and cross-checking calculations</td>
+  </tr>
+  <tr>
+    <td align="center" style="background-color:#0d1117;">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="45"/><br><b>Markdown & GitHub</b>
+    </td>
+    <td style="background-color:#0d1117;color:#e6e6e6;">Report documentation and version control</td>
+  </tr>
+</table>
+
+
+
+
+
+
 
 ---
 
