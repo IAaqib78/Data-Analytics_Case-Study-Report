@@ -38,7 +38,23 @@
 This case study explores **avocado market trends in the United States**, focusing on **average prices, sales volumes, and regional patterns**.  
 The objective is to analyze how **seasonality, geography, and consumer preference** influence the avocado market using real-world retail data.
 
-The analysis was performed as part of the **Google Data Analytics Professional Certificate**, demonstrating applied skills in **data cleaning, visualization, and storytelling using R and spreadsheets**.
+The analysis was performed as part of the **Google Data Analytics Professional Certificate**, demonstrating applied skills in **data cleaning, visualization, and storytelling using**
+
+
+
+
+<p align="center">
+ <img src="https://img.shields.io/badge/R%20|%20RStudio-276DC3?style=for-the-badge&logo=r&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Google%20Sheets-34A853?style=for-the-badge&logo=googlesheets&logoColor=white"/>   And   
+  <img src="https://img.shields.io/badge/ggplot2-EE4C2C?style=for-the-badge&logo=tidyverse&logoColor=white"/>
+</p>
+
+
+
+
+
+
+
 
 ---
 
