@@ -126,8 +126,7 @@ This study validates the power of **Google Data Analytics methodology**—from *
 
 <p align="center">
   <a href="avocado_case_study.html" target="_blank">
-    <img src="https://img.shields.io/badge/🍃_Launch_Full_Interactive_Report-%2300e676?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0D1117&color=00e676" 
-         alt="View Full Interactive Report" />
+    <img src="Avacado.png" />
   </a>
 </p>
 
