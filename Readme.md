@@ -11,7 +11,7 @@
 </h1>
 
 <p align="center">
-  <img src="Avocado.jpge" alt="Avocado Market Trend Analysis Banner" style="width:100%; max-width:1200px; height:auto; border-radius:12px; box-shadow:0 0 20px rgba(129,199,132,0.3);">
+  <img src="Avocado.jpeg" alt="Avocado Market Trend Analysis Banner" style="width:100%; max-width:1200px; height:auto; border-radius:12px; box-shadow:0 0 20px rgba(129,199,132,0.3);">
 </p>
 
 
