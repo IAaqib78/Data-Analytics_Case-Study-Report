@@ -2,6 +2,27 @@
  🥑 Avocado Market Trend Analysis Case Study  
 </h1>
 
+
+
+
+
+<h1 align="center" style="font-family:'Segoe UI',sans-serif; color:#81C784;">
+ 
+</h1>
+
+<p align="center">
+  <img src="Avocado.jpge" alt="Avocado Market Trend Analysis Banner" style="width:100%; max-width:1200px; height:auto; border-radius:12px; box-shadow:0 0 20px rgba(129,199,132,0.3);">
+</p>
+
+
+
+
+
+
+
+
+
+
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" width="120" alt="Google Logo"/>  
 </p>
