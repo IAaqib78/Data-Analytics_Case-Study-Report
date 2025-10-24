@@ -42,21 +42,83 @@ The analysis was performed as part of the **Google Data Analytics Professional C
 
 ---
 
-##  Objectives
-1. Identify **price and demand trends** over time.  
-2. Compare **regional market differences** for avocados.  
-3. Understand the correlation between **volume and price movements**.  
-4. Communicate insights effectively through **data visualization and reports**.
+<h2 align="center"> Project Objectives</h2>
+  
+<div align="center" style="background-color:#0d1117; padding:25px; border-radius:15px; box-shadow:0 0 15px #00ffc6; width:90%; margin:auto;">
+
+  <ol align="left" style="color:#e6e6e6; font-size:16px; line-height:1.8;">
+    <li>
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="22"/> 
+      Identify <b>price and demand trends</b> across time to detect seasonal or cyclical behavior.
+    </li>
+    <hr style="border:0; height:1px; background:linear-gradient(to right, #00ffc6, #ff00ff); width:85%;">
+  .
+    <li>
+      <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" width="22"/> 
+      Compare <b>regional market differences</b> to assess performance and pricing dynamics.
+    </li>
+    <hr style="border:0; height:1px; background:linear-gradient(to right, #00ffc6, #ff00ff); width:85%;">
+    .
+    <li>
+      <img src="https://cdn-icons-png.flaticon.com/512/10773/10773252.png" width="22"/> 
+      Analyze the correlation between <b>sales volume and price movements</b> to uncover demand elasticity.
+    </li>
+    <hr style="border:0; height:1px; background:linear-gradient(to right, #00ffc6, #ff00ff); width:85%;">
+    .
+    <li>
+      <img src="https://cdn-icons-png.flaticon.com/512/2819/2819194.png" width="22"/> 
+      Communicate insights through <b>data visualization and concise reporting</b> for business impact.
+    </li>
+  </ol>
+</div>
+
 
 ---
 
-##  Key Insights
-- **Prices exhibit seasonality** — higher around Q4 each year, likely due to holidays and demand spikes.  
-- **Volume inversely correlates with price**, suggesting demand elasticity in the market.  
-- **California and West regions dominate** in both price and sales volume.  
-- **Organic avocados** show a smaller market share but higher average prices.
+
+
+
+
+
+
+<h2 align="center"> Key Insights</h2>
+
+<div align="center" style="background-color:#0d1117; padding:20px; border-radius:15px; box-shadow:0 0 15px #00ffc6; width:90%; margin:auto;">
+
+  <p align="left" style="color:#e6e6e6; font-size:15px; line-height:1.6;">
+    <img src="https://cdn-icons-png.flaticon.com/512/3208/3208756.png" width="25"/> 
+    <b>Seasonal Pricing:</b> Prices peak around <b>Q4 each year</b>, reflecting holiday-driven demand surges and supply constraints.
+  </p>
+  <hr style="border:0; height:1px; background:linear-gradient(to right, #00ffc6, #ff00ff); width:85%;">
+
+  <p align="left" style="color:#e6e6e6; font-size:15px; line-height:1.6;">
+    <img src="https://cdn-icons-png.flaticon.com/512/263/263115.png" width="25"/> 
+    <b>Demand Elasticity:</b> A clear <b>inverse correlation</b> between price and volume — when prices rise, sales volume tends to decline.
+  </p>
+  <hr style="border:0; height:1px; background:linear-gradient(to right, #00ffc6, #ff00ff); width:85%;">
+
+  <p align="left" style="color:#e6e6e6; font-size:15px; line-height:1.6;">
+    <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" width="25"/> 
+    <b>Regional Dominance:</b> <b>California</b> and the <b>Western U.S.</b> remain top-performing regions in both sales and price averages.
+  </p>
+  <hr style="border:0; height:1px; background:linear-gradient(to right, #00ffc6, #ff00ff); width:85%;">
+
+  <p align="left" style="color:#e6e6e6; font-size:15px; line-height:1.6;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1157/1157109.png" width="25"/> 
+    <b>Organic Market Share:</b> Though smaller in volume, <b>organic avocados</b> consistently maintain <b>premium pricing</b> across regions.
+  </p>
+
+</div>
 
 ---
+
+
+
+
+
+
+
+
 
 ---
 
@@ -160,14 +222,69 @@ The analysis was performed as part of the **Google Data Analytics Professional C
 
 ---
 
-##  Methodology
-1. **Data Collection:** Avocado dataset sourced from *Hass Avocado Board* via Kaggle.  
-2. **Data Cleaning:** Removed duplicates, handled missing entries, formatted date columns.  
-3. **Processing:** Aggregated by region, month, and year for trend observation.  
-4. **Visualization:** Built charts to identify demand patterns and anomalies.  
-5. **Insight Reporting:** Highlighted actionable trends and summarized findings.
+<h2 align="center"> Methodology</h2>
+
+<table align="center">
+  <tr>
+    <th align="center" width="180" style="background-color:#1a1a1a;color:#00e6b8;">Phase</th>
+    <th align="center" style="background-color:#1a1a1a;color:#00e6b8;">Description</th>
+  </tr>
+  
+  <tr>
+    <td align="center" style="background-color:#0d1117;">
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048949.png" width="45"/><br><b>Data Collection</b>
+    </td>
+    <td style="background-color:#0d1117;color:#e6e6e6;">
+      Avocado dataset sourced from the <b>Hass Avocado Board</b> via <b>Kaggle</b>, ensuring reliable and comprehensive coverage across U.S. regions.
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="center" style="background-color:#0d1117;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" width="45"/><br><b>Data Cleaning</b>
+    </td>
+    <td style="background-color:#0d1117;color:#e6e6e6;">
+      Removed duplicates, handled missing values, standardized column names, and formatted date columns for temporal consistency.
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="center" style="background-color:#0d1117;">
+      <img src="https://cdn-icons-png.flaticon.com/512/8832/8832682.png" width="45"/><br><b>Processing</b>
+    </td>
+    <td style="background-color:#0d1117;color:#e6e6e6;">
+      Aggregated data by <b>region</b>, <b>month</b>, and <b>year</b> to enable time-series and geographical trend analysis.
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="center" style="background-color:#0d1117;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" width="45"/><br><b>Visualization</b>
+    </td>
+    <td style="background-color:#0d1117;color:#e6e6e6;">
+      Created charts and dashboards using <b>R (ggplot2)</b> to uncover demand patterns, anomalies, and seasonal insights.
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="center" style="background-color:#0d1117;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2103/2103606.png" width="45"/><br><b>Insight Reporting</b>
+    </td>
+    <td style="background-color:#0d1117;color:#e6e6e6;">
+      Summarized actionable findings, key correlations, and regional performance trends for data-driven decision-making.
+    </td>
+  </tr>
+</table>
 
 ---
+
+
+
+
+
+
+
+
 
 ## 💡 Conclusion
 The Avocado Market Trend Analysis demonstrates how **data-driven insights** can improve **pricing, logistics, and inventory decisions** in agribusiness.  
