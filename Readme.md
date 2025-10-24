@@ -86,7 +86,7 @@ The analysis was performed as part of the **Google Data Analytics Professional C
 
 <p align="center">
   <img src="charts/monthly_avg_price.png" width="45%" alt="Monthly Average Price"/>
-  <img src="charts/monthly_avg_volume.png" width="45%" alt="Monthly Average Volume"/>
+  <img src="charts/monthly_avg_volume.png" width="45%" alt="Total Volume By Month"/>
 </p>
 
 <p align="center">
