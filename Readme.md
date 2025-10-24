@@ -85,12 +85,12 @@ The analysis was performed as part of the **Google Data Analytics Professional C
 | **📍 Top 12 Regions by Average Price** | Highlights market diversity and regional pricing differences. |
 
 <p align="center">
-  <img src="charts/monthly_avg_price.png" width="45%" alt="Monthly Average Price"/>
-  <img src="charts/monthly_avg_volume.png" width="45%" alt="Total Volume By Month"/>
+  <img src="Monthly_avg_price.png" width="45%" alt="Monthly Average Price"/>
+  <img src="total_vol_month.png" width="45%" alt="Total Volume By Month"/>
 </p>
 
 <p align="center">
-  <img src="charts/top12_regions_price.png" width="80%" alt="Top 12 Regions by Price"/>
+  <img src="top_12.png" width="80%" alt="Top 12 Regions by Price"/>
 </p>
 
 ---
