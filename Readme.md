@@ -1,50 +1,134 @@
-#  Avocado Market Trend Analysis Case Study
+<h1 align="center">
+ 🥑 Avocado Market Trend Analysis Case Study  
+</h1>
 
-This repository presents a comprehensive **data analytics project** exploring pricing and sales trends in the **U.S. Avocado Market** using **R and R Markdown**. The analysis leverages Kaggle’s *Avocado Prices Dataset* to uncover insights that can guide **marketing strategies, pricing optimization, and supply chain planning** for grocery retailers.
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" width="120" alt="Google Logo"/>  
+</p>
 
-##  Project Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Case_Study_By-Google_Data_Analytics-%2300C853?style=for-the-badge&logo=google&logoColor=white&labelColor=0D1117&color=00C853"/>
+  <img src="https://img.shields.io/badge/Completed_By-Aakif_Altaf-%2300E5FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117&color=00E5FF"/>
+</p>
 
-The study investigates how factors such as **region, avocado type (conventional vs. organic), and time** influence both **average prices** and **sales volumes**. By combining descriptive statistics, time series visualization, and comparative analysis, the project highlights key business insights and actionable recommendations.
+---
+
+## 📘 Overview
+This case study explores **avocado market trends in the United States**, focusing on **average prices, sales volumes, and regional patterns**.  
+The objective is to analyze how **seasonality, geography, and consumer preference** influence the avocado market using real-world retail data.
+
+The analysis was performed as part of the **Google Data Analytics Professional Certificate**, demonstrating applied skills in **data cleaning, visualization, and storytelling using R and spreadsheets**.
+
+---
 
 ##  Objectives
+1. Identify **price and demand trends** over time.  
+2. Compare **regional market differences** for avocados.  
+3. Understand the correlation between **volume and price movements**.  
+4. Communicate insights effectively through **data visualization and reports**.
 
-* Identify regional differences in avocado prices and sales performance.
-* Explore how seasonality impacts price fluctuations and demand.
-* Compare sales patterns between organic and conventional avocados.
-* Provide data-driven recommendations to improve marketing and inventory strategies.
-
-##  Tools & Technologies
-
-* **Language:** R
-* **Libraries:** tidyverse, lubridate, janitor, ggplot2, dplyr
-* **Deliverables:** RMarkdown (.Rmd), HTML Report, PDF Report
+---
 
 ##  Key Insights
+- **Prices exhibit seasonality** — higher around Q4 each year, likely due to holidays and demand spikes.  
+- **Volume inversely correlates with price**, suggesting demand elasticity in the market.  
+- **California and West regions dominate** in both price and sales volume.  
+- **Organic avocados** show a smaller market share but higher average prices.
 
-* **Seasonal trends** reveal that avocado prices peak during specific months, likely due to demand surges.
-* **Organic avocados** are consistently priced higher but show **lower volume** compared to conventional ones.
-* **Regional variations** indicate that the West Coast markets have higher average prices, while the South shows greater volume sales.
-* **Negative correlation** between price and total volume implies classic demand elasticity — as prices rise, sales decrease.
+---
 
-##  Business Impact
+---
 
-Retailers can use these insights to:
+## 🧱 Stack Architecture
 
-* Adjust pricing dynamically during seasonal demand peaks.
-* Tailor promotions for regions with price-sensitive consumers.
-* Plan inventory more accurately to minimize waste and maximize profit.
+<p align="center">
+  <img src="https://img.shields.io/badge/Data_Source-Kaggle_%7C_Hass_Avocado_Board-%23FFB300?style=for-the-badge&logo=kaggle&logoColor=white&labelColor=0D1117&color=FFB300"/>
+</p>
 
-##  Author
+<p align="center">
+  <img src="https://img.shields.io/badge/Data_Preparation-Google_Sheets_%7C_RStudio-%2300C853?style=for-the-badge&logo=googlesheets&logoColor=white&labelColor=0D1117&color=00C853"/>
+</p>
 
-**Aakif Altaf**
+<p align="center">
+  <img src="https://img.shields.io/badge/Analysis_&_Modeling-R_%7C_ggplot2_%7C_dplyr-%2300B8D9?style=for-the-badge&logo=r&logoColor=white&labelColor=0D1117&color=00B8D9"/>
+</p>
 
-*Data Scientist & Analyst*
-Certified by **IBM (Data Science)** and **Google (Data Analytics)**.
-Passionate about transforming raw datasets into strategic insights that drive smarter business decisions.
+<p align="center">
+  <img src="https://img.shields.io/badge/Visualization-ggplot2_%7C_Matplotlib_%7C_Dashboards-%23D500F9?style=for-the-badge&logo=plotly&logoColor=white&labelColor=0D1117&color=D500F9"/>
+</p>
 
- 
+<p align="center">
+  <img src="https://img.shields.io/badge/Documentation-Markdown_%7C_GitHub-%2300E5FF?style=for-the-badge&logo=markdown&logoColor=white&labelColor=0D1117&color=00E5FF"/>
+</p>
 
-📫 Connect on [kmrtech99@gmail.com) or explore my portfolio for more case studies.
+<p align="center">
+  <img src="https://img.shields.io/badge/Final_Report-Google_Data_Analytics_Capstone-%23FF4081?style=for-the-badge&logo=google&logoColor=white&labelColor=0D1117&color=FF4081"/>
+</p>
+
+---
 
 
-**[View the Avocado Case Study](https://iaaqib78.github.io/Data-Analytics_Case-Study-Report/avocado_case_study.html)**
+
+
+
+
+
+
+
+
+##  Visual Analytics
+
+| Visualization | Description |
+|:--------------|:-------------|
+| **📈 Monthly Average Price Trend** | Displays overall avocado price movements per month across years. |
+| **📦 Monthly Average Volume Trend** | Illustrates supply variations and demand surges. |
+| **📍 Top 12 Regions by Average Price** | Highlights market diversity and regional pricing differences. |
+
+<p align="center">
+  <img src="charts/monthly_avg_price.png" width="45%" alt="Monthly Average Price"/>
+  <img src="charts/monthly_avg_volume.png" width="45%" alt="Monthly Average Volume"/>
+</p>
+
+<p align="center">
+  <img src="charts/top12_regions_price.png" width="80%" alt="Top 12 Regions by Price"/>
+</p>
+
+---
+
+## 🧰 Tools & Techniques
+| Tool | Purpose |
+|------|----------|
+| **R / RStudio** | Data cleaning, wrangling, and visualization |
+| **ggplot2** | Plotting trends and comparative analytics |
+| **Excel / Google Sheets** | Quick EDA and cross-checking calculations |
+| **Markdown & GitHub** | Report documentation and version control |
+
+---
+
+##  Methodology
+1. **Data Collection:** Avocado dataset sourced from *Hass Avocado Board* via Kaggle.  
+2. **Data Cleaning:** Removed duplicates, handled missing entries, formatted date columns.  
+3. **Processing:** Aggregated by region, month, and year for trend observation.  
+4. **Visualization:** Built charts to identify demand patterns and anomalies.  
+5. **Insight Reporting:** Highlighted actionable trends and summarized findings.
+
+---
+
+## 💡 Conclusion
+The Avocado Market Trend Analysis demonstrates how **data-driven insights** can improve **pricing, logistics, and inventory decisions** in agribusiness.  
+This study validates the power of **Google Data Analytics methodology**—from *Ask → Prepare → Process → Analyze → Share → Act*—in real-world applications.
+
+---
+
+<p align="center">
+  <a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank">
+    <img src="https://img.shields.io/badge/View_Google_Data_Analytics_Program-%2300C853?style=for-the-badge&logo=coursera&logoColor=white&labelColor=0D1117&color=00C853"/>
+  </a>
+</p>
+
+---
+
+<p align="center">
+  <b>“Turning raw data into insightful stories — one avocado at a time.”</b>  
+  <br> — <i>Prepared and Documented by Aakif Altaf</i>
+</p>
